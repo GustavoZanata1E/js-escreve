@@ -1,33 +1,17 @@
-let cor;
-let circuloX; // horizontal
-let circuloY; // vertical
-
 function setup() {
-  createCanvas(400, 400);
-  background(color(100, 500 , 0));
-  cor = color(random(0, 255), random(0, 255), random(0, 255));
-  
-  circuloX = [0, 0, 0];
-  circuloY = [random(height), random(height), random(height)];
+  createCanvas(600, 600);
+background("black")
 }
 
-function draw() {
+  function draw() {
   
-  fill(cor);
   
-  for(let contador in circuloX) {
-    circle(circuloX[contador], circuloY[contador], 50);    
-    circuloX[contador]+= random(0,3);
-    circuloY[contador]+= random(-3,3); 
-    
-    if(circuloX[contador] >= width){
-      circuloX[contador] = 0;
-      circuloY[contador] = random(height);
-    }
-  }
+  stroke ("blue");
+  fill("red");
   
-  if(mouseIsPressed){
-    cor = color(random(10, 255), random(0, 255), random(0, 255), random(0, 100));
-  }
-}
+  //console.log(mouseIsPressed);
 
+ if(mouseIsPressed){  
+   rect(mouseX,mouseY,20,35);   
+   }
+}
